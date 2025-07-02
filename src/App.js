@@ -45,10 +45,10 @@ const questions = [
 ];
 
 function FlashCards() {
-  const [selectedId, setSelectedId] = useState(9103);
+  const [selectedId, setSelectedId] = useState(null);
 
   function setCurrentId(id) {
-    setSelectedId(id);
+    setSelectedId(id != selectedId ? id : null);
   }
 
   return (
